@@ -18,6 +18,8 @@ import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.yyds.viewmodel_livedata.bean.User;
+import com.yyds.viewmodel_livedata.fallview.FallObject;
+import com.yyds.viewmodel_livedata.fallview.FallView;
 import com.yyds.viewmodel_livedata.manager.UploadWorker;
 import com.yyds.viewmodel_livedata.swipeflingview.SwipeFlingAdapterView;
 import com.yyds.viewmodel_livedata.viewmodel.UserViewModel;
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements SwipeFlingAdapter
     private int cardHeight;
     private InnerAdapter adapter;
 
+    private FallView fallView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +103,16 @@ public class MainActivity extends AppCompatActivity implements SwipeFlingAdapter
     }
 
     private void initView() {
+
+//        fallView = findViewById(R.id.fall_view);
+//
+//        FallObject fallObject = new FallObject.Builder(getResources().getDrawable(R.mipmap.snow))
+//                .build();
+//
+//        fallView.addFallObject(fallObject, 6);
+
+
+
         DisplayMetrics dm = getResources().getDisplayMetrics();
         float density = dm.density;
         cardWidth = (int) (dm.widthPixels - (2 * 18 * density));

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
@@ -61,5 +62,17 @@
         android:id="@+id/blurview"
         android:layout_width="match_parent"
         android:layout_height="600dp"
+        android:visibility="gone"
         app:blur_mode="rectangle"/>
+
+    <com.yyds.viewmodel_livedata.fallview.FallView
+        android:id="@+id/fall_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.yyds.viewmodel_livedata.snowview.CustomSnowView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </RelativeLayout>
